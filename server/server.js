@@ -24,6 +24,15 @@ const handleRequest = function(request, response) {
   } else if(request.url === '/webrtc.js') {
     response.writeHead(200, {'Content-Type': 'application/javascript'});
     response.end(fs.readFileSync('client/webrtc.js'));
+  } else if(request.url === '/bc.js') {
+    response.writeHead(200, {'Content-Type': 'application/javascript'});
+    response.end(fs.readFileSync('client/bc.js'));
+  } else if(request.url === '/joinstream.js') {
+    response.writeHead(200, {'Content-Type': 'application/javascript'});
+    response.end(fs.readFileSync('client/joinstream.js'));
+  } else if(request.url === '/joinstream.html') {
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.end(fs.readFileSync('client/joinstream.html'));
   }
 };
 
